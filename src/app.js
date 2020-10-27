@@ -64,8 +64,6 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO: A rota deve aumentar o número de likes do repositório 
-  // específico escolhido através do id presente nos parâmetros da rota, a cada chamada dessa rota, o número de likes deve ser aumentado em 1;
   const { id } = request.params;
 
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
